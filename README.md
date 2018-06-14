@@ -1,0 +1,1 @@
+These are a set of examples made to understand some concepts of **functional programming** and **Typelevel/Cats**
