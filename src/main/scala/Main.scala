@@ -1,9 +1,11 @@
 import interfaces.Printer
 import interfaces.PrintableSyntax.PrintableOps
 import instances.PrintableInstances._
+import instances.ShowCustomInstances._
 import model.Cat
 import cats._
 import cats.implicits._
+
 
 object Main extends App {
   Printer.print(1)
@@ -29,6 +31,11 @@ object Main extends App {
   println(showIntAsString)
 
 
+  // using a Custom Show Instances for Cat
+
+ val showCat: Show[Cat] = Show.apply[Cat]
+
+  println(showCat.show(cat))
 
 
 
