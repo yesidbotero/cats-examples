@@ -34,8 +34,22 @@ object Main extends App {
   // using a Custom Show Instances for Cat
 
  val showCat: Show[Cat] = Show.apply[Cat]
-
+  // using show method directly, without interfaces
   println(showCat.show(cat))
+
+  // Eq for Int
+
+  val eqInt = Eq.apply[Int]
+
+  println(s"Comparing 1 with 3 using Eq instance for Int:  ${eqInt.eqv(1, 3)}")
+  println(s"Comparing 3 with 3 using Eq interface sysntax: ${ 3 === 3}")
+
+
+  //custom instance for Eq
+
+
+
+
 
 
 
