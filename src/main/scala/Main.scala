@@ -1,6 +1,9 @@
 import interfaces.Printer
 import interfaces.PrintableSyntax.PrintableOps
 import instances.PrintableInstances._
+import instances.MonoidInstances._
+import interfaces.MonoidSyntax._
+import typeclasses.MonoidLaws
 import instances.ShowCustomInstances._
 import model.Cat
 import cats._
@@ -45,7 +48,12 @@ object Main extends App {
   println(s"Comparing 3 with 3 using Eq interface sysntax: ${ 3 === 3}")
 
 
-  //custom instance for Eq
+  //Monoid Exercise
+
+  println(s"Is monoid ?: ${MonoidLaws.isMonoid(true, false)(orBoolean)}")
+  println(s"Is monoid ?: ${MonoidLaws.isMonoid(true, false)(andBoolean)}")
+
+
 
 
 
