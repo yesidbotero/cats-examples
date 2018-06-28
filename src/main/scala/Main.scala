@@ -2,7 +2,6 @@ import interfaces.Printer
 import interfaces.PrintableSyntax.PrintableOps
 import instances.PrintableInstances._
 import instances.MonoidInstances._
-import interfaces.MonoidSyntax._
 import typeclasses.MonoidLaws
 import instances.ShowCustomInstances._
 import model.Cat
@@ -50,8 +49,8 @@ object Main extends App {
 
   //Monoid Exercise
 
-  println(s"Is monoid ?: ${MonoidLaws.isMonoid(true, false)(orBoolean)}")
-  println(s"Is monoid ?: ${MonoidLaws.isMonoid(true, false)(andBoolean)}")
+  println(s"orBoolean instance is monoid ?: ${MonoidLaws.isMonoid(true, false)(orBoolean)}")
+  println(s"andBoolean instance is s monoid ?: ${MonoidLaws.isMonoid(true, false)(andBoolean)}")
 
 
 
