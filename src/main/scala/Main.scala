@@ -9,6 +9,7 @@ import cats._
 import cats.implicits._
 
 
+
 object Main extends App {
   Printer.print(1)
 
