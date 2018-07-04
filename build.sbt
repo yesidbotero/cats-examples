@@ -10,5 +10,6 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 
 scalacOptions ++= Seq(
   "-Xfatal-warnings",
-  "-Ypartial-unification"
+  "-Ypartial-unification",
+  "-language:higherKinds"
 )

@@ -4,7 +4,8 @@ import instances.PrintableInstances._
 import instances.MonoidInstances._
 import typeclasses.MonoidLaws
 import instances.ShowCustomInstances._
-import model.Cat
+import instances.CustomFunctorInstances._
+import model.{Branch, Cat, Leaf}
 import cats._
 import cats.implicits._
 
@@ -53,12 +54,8 @@ object Main extends App {
   println(s"orBoolean instance is monoid ?: ${MonoidLaws.isMonoid(true, false)(orBoolean)}")
   println(s"andBoolean instance is s monoid ?: ${MonoidLaws.isMonoid(true, false)(andBoolean)}")
 
+  // Functor exercise
 
-
-
-
-
-
-
+  treeFunctor.map(Branch(Leaf(10), Leaf(5)))((x: Int) => x.toString)
 
 }
